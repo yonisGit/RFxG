@@ -1,6 +1,9 @@
 
 # PyTorch Implementation of RFxG
 
+[![Paper](https://img.shields.io/badge/Paper-AAAI26-blue)](https://arxiv.org/pdf/2511.13081v2)
+[![Project-Page](https://img.shields.io/badge/Project-Website-green)](https://yonisgit.github.io/rfxg1/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Introduction
 This is the official PyTorch implementation of the Reference-Frame x Granularity (RFxG) Taxonomy (AAAI 2026).
