@@ -38,11 +38,14 @@ For comparison, we used the following implementations of code from git repositor
 ## Citing our work
 Please cite our work if you use it in your research:
 ```
-@article{elisha2025rethinking,
+@inproceedings{elisha2026rethinking,
   title={Rethinking Saliency Maps: A Cognitive Human Aligned Taxonomy and Evaluation Framework for Explanations},
   author={Elisha, Yehonatan and Cohen, Seffi and Barkan, Oren and Koenigstein, Noam},
-  journal={arXiv preprint arXiv:2511.13081},
-  year={2025}
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={40},
+  number={5},
+  pages={3750--3758},
+  year={2026}
 }
 ```
 
