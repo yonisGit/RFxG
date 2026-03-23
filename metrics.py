@@ -3,9 +3,6 @@ from sklearn.metrics import auc
 
 
 def mask_top_pixels(image, saliency_map, alpha, masking_method='black'):
-    """
-    Masks the top-alpha most salient pixels in the image.
-    """
     if len(image.shape) == 2:
         image = np.repeat(image[:, :, np.newaxis], 3, axis=2)
     elif image.shape[0] == 3 and len(image.shape) == 3:
@@ -43,10 +40,7 @@ def mask_top_pixels(image, saliency_map, alpha, masking_method='black'):
 
 def compute_ccs(model, image, saliency_map, class_a, class_b,
                 alphas=None, masking_method='black', return_curve=False):
-    """
-    Contrastive Contrastivity Score (CCS).
-
-    """
+                    
     if alphas is None:
         alphas = np.linspace(0.1, 0.9, 9)  # 10% to 90% in 10% steps
 
@@ -66,10 +60,7 @@ def compute_ccs(model, image, saliency_map, class_a, class_b,
 
 def compute_cgc(model, image, saliency_map, class_a, group_a,
                 alphas=None, masking_method='black', return_curve=False):
-    """
-    Class Group Contrastivity (CGC).
-
-    """
+                    
     if alphas is None:
         alphas = np.linspace(0.1, 0.9, 9)
 
@@ -93,10 +84,7 @@ def compute_cgc(model, image, saliency_map, class_a, group_a,
 
 def compute_pgs(model, image, saliency_map, group_a,
                 alphas=None, masking_method='black', return_curve=False):
-    """
-    Pointwise Group Score (PGS).
 
-    """
     if alphas is None:
         alphas = np.linspace(0.1, 0.9, 9)
     orig_probs = model(image)[0]
@@ -117,9 +105,7 @@ def compute_pgs(model, image, saliency_map, group_a,
 
 def compute_cgs(model, image, saliency_map, group_a, group_b,
                 alphas=None, masking_method='black', return_curve=False):
-    """
-    Contrastive Group Score (CGS).
-    """
+
     if alphas is None:
         alphas = np.linspace(0.1, 0.9, 9)
 
